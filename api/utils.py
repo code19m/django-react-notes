@@ -23,6 +23,7 @@ def createNote(request):
     serializer = NoteSerializer(note, many=False)
     return Response(serializer.data)
 
+
 def updateNote(request, pk):
     data = request.data
     note = Note.objects.get(id=pk)
